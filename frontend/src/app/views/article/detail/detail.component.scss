@@ -1,0 +1,329 @@
+@import "../../../../assets/styles/variables";
+@import "../../../../assets/styles/mixins";
+
+.detail {
+  padding-top: 80px;
+  padding-bottom: 120px;
+
+  .container {
+    position: relative;
+
+    .detail-title {
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      color: #B9D5FD;
+      margin-bottom: 60px;
+
+      span:first-child {
+        font-family: 'Suisse-Intl', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: #B9D5FD;
+        margin-left: 8px;
+        margin-right: 8px;
+      }
+
+      span:nth-child(2) {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        color: $active-and-phone-and-title-color;
+
+      }
+    }
+
+    .detail-layout-image {
+      float: right;
+      min-width: 527px;
+      height: 320px;
+      margin-left: 106px;
+      margin-bottom: 60px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    .detail-layout {
+
+      .related-articles {
+        position: absolute;
+        top: 601px;
+        right: 0;
+
+        .related-articles-title {
+          font-family: 'Lora', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 26px;
+          color: $active-and-phone-and-title-color;
+          margin-bottom: 20px;
+          margin-right: 99px;
+        }
+
+        .related-articles-items {
+          display: grid;
+          grid-template-columns: repeat(1, 291px);
+          row-gap: 60px;
+        }
+      }
+
+    }
+
+    .article-share {
+      margin-top: 61px;
+      display: flex;
+
+      span {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        color: $active-and-phone-and-title-color;
+        margin-right: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        margin-right: 13px;
+        display: flex;
+      }
+
+    }
+
+    .comments {
+      margin-top: 120px;
+
+      .comments-title {
+        @include head-lora-38;
+        color: $active-and-phone-and-title-color;
+        margin-bottom: 20px;
+      }
+
+      .comments-auth {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        color: $base-blue-text-color;
+        margin-bottom: 60px;
+
+        a {
+          text-decoration: none;
+          font-family: 'Montserrat', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          color: $active-and-phone-and-title-color;
+        }
+      }
+
+      .comment-add {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        textarea {
+          padding: 20px;
+          width: 818px;
+          height: 248px;
+          background: #FFFFFF;
+          border: 2px solid #709FDC;
+          border-radius: 3px;
+          font-family: 'Montserrat', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          color: $base-blue-text-color;
+          margin-bottom: 20px;
+          outline: none;
+          box-sizing: border-box;
+        }
+
+        .comment-add-button {
+          padding: 15px 91px;
+          background: $active-and-phone-and-title-color;
+          border-radius: 5px;
+          font-family: 'Montserrat', sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          color: #FFFFFF;
+          border: none;
+          box-sizing: border-box;
+          cursor: pointer;
+          margin-bottom: 60px;
+        }
+      }
+
+      .comments-empty {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        color: $base-blue-text-color;
+      }
+
+
+    }
+
+    .comment-load {
+      margin-top: 60px;
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      color: $active-and-phone-and-title-color;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        margin-left: 10px;
+      }
+    }
+  }
+}
+
+
+.loader {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  margin: 20px 20px 20px 100px;
+
+  div {
+    position: absolute;
+    background: #2d50a7;
+    width: 16px;
+    height: 44px;
+    border-radius: 8px;
+  }
+  .loader-line1 {
+    top: 0;
+    left: 72px;
+    animation: 0.8s linear infinite line1;
+  }
+  .loader-line2 {
+    top: 16px;
+    right: 32px;
+    transform: rotate(45deg);
+    animation: 0.8s linear infinite line2;
+  }
+  .loader-line3 {
+    top: 58px;
+    right: 16px;
+    transform: rotate(90deg);
+    animation: 0.8s linear infinite line3;
+  }
+  .loader-line4 {
+    bottom: 16px;
+    right: 32px;
+    transform: rotate(135deg);
+    animation: 0.8s linear infinite line4;
+  }
+  .loader-line5 {
+    bottom: 0;
+    right: 72px;
+    animation: 0.8s linear infinite line5;
+  }
+  .loader-line6 {
+    bottom: 17px;
+    left: 32px;
+    transform: rotate(45deg);
+    animation: 0.8s linear infinite line6;
+  }
+  .loader-line7 {
+    top: 58px;
+    left: 16px;
+    transform: rotate(90deg);
+    animation: 0.8s linear infinite line7;
+  }
+  .loader-line8 {
+    top: 16px;
+    left: 32px;
+    transform: rotate(135deg);
+    animation: 0.8s linear infinite line8;
+  }
+
+  @keyframes line1 {
+    0%, 12.5%, 100% {
+      background: #c4d9fd;
+    }
+    12.5% {
+      background: #2d50a7;
+    }
+  }
+
+  @keyframes line2 {
+    0%, 12.5%, 100% {
+      background: #c4d9fd;
+    }
+    25% {
+      background: #2d50a7;
+    }
+  }
+
+  @keyframes line3 {
+    0%, 12.5%, 100% {
+      background: #c4d9fd;
+    }
+    37.5% {
+      background: #2d50a7;
+    }
+  }
+
+  @keyframes line4 {
+    0%, 12.5%, 100% {
+      background: #c4d9fd;
+    }
+    50% {
+      background: #2d50a7;
+    }
+  }
+
+  @keyframes line5 {
+    0%, 12.5%, 100% {
+      background: #c4d9fd;
+    }
+    62.5% {
+      background: #2d50a7;
+    }
+  }
+
+  @keyframes line6 {
+    0%, 12.5%, 100% {
+      background: #c4d9fd;
+    }
+    75% {
+      background: #2d50a7;
+    }
+  }
+
+  @keyframes line7 {
+    0%, 12.5%, 100% {
+      background: #c4d9fd;
+    }
+    87.5% {
+      background: #2d50a7;
+    }
+  }
+
+  @keyframes line8 {
+    0%, 12.5%, 100% {
+      background: #c4d9fd;
+    }
+    100% {
+      background: #2d50a7;
+    }
+  }
+
+}
+
+
+
+

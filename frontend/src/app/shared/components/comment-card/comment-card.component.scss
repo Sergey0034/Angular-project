@@ -1,0 +1,85 @@
+@import "../../../../assets/styles/variables";
+
+.comment-user {
+  margin-bottom: 40px;
+  .comment-head {
+    display: flex;
+    margin-bottom: 15px;
+
+    .user-image {
+      width: 60px;
+      height: 60px;
+      border-radius: 50px;
+      background: #b9d5fd;
+      margin-right: 26px;
+      border: 2px solid $active-and-phone-and-title-color;
+    }
+
+    .comment-info {
+      .user-name {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        color: $active-and-phone-and-title-color;
+        margin-bottom: 10px;
+      }
+
+      .comment-date {
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: #BEBEBE;
+      }
+    }
+  }
+
+  .comment-text {
+    width: 854px;
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: $base-blue-text-color;
+    margin-bottom: 40px;
+  }
+
+  .comment-icons {
+    display: flex;
+
+
+    .icon-block {
+      margin-right: 15px;
+      display: flex;
+      align-items: center;
+      span {
+        margin-right: 3px;
+        font-family: 'Montserrat', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        color: $base-blue-text-color;
+      }
+
+      svg {
+        display: flex;
+        cursor: pointer;
+        stroke: $base-blue-text-color;
+      }
+
+      &.active {
+        svg {
+          stroke: $active-and-phone-and-title-color;
+        }
+
+        span {
+          color: $active-and-phone-and-title-color;
+        }
+
+      }
+    }
+
+  }
+}
